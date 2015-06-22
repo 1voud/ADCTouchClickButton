@@ -1,3 +1,8 @@
+/*
+  ADCTouch.cpp - Library for Capacittive touch sensors using only one ADC PIN
+  Created by martin2250, April 23, 2014.
+  Released into the public domain.
+*/
 /*    ClickButton
  
  Arduino library that decodes multiple clicks on one button.
@@ -70,10 +75,6 @@ ADCTouchClickButton::ADCTouchClickButton(uint8_t buttonPin, int adcSamples, int 
   debounceTime   = 20;            // Debounce timer in ms
   multiclickTime = 250;           // Time limit for multi clicks
   longClickTime  = 1000;          // time until long clicks register
-//  pinMode(_pin, INPUT);
-//  pinMode(_pin, INPUT);
-  
-//  ADCChannel = A0;
   limit = adcLimit;
   samples = adcSamples;
 }
@@ -92,32 +93,6 @@ ADCTouchClickButton::ADCTouchClickButton(uint8_t buttonPin, int adcSamples, int 
   debounceTime   = 20;            // Debounce timer in ms
   multiclickTime = 250;           // Time limit for multi clicks
   longClickTime  = 1000;          // time until long clicks register
-//  pinMode(_pin, INPUT);
-  
-//  ADCChannel = A0;
-  limit = adcLimit;
-  samples = adcSamples;
-}
-
-ADCTouchClickButton::ADCTouchClickButton(uint8_t buttonPin, int adcSamples, int adcLimit, boolean activeType, boolean internalPullup)
-{
-  _pin           = buttonPin;
-  _activeHigh    = activeType;
-  _btnState      = !_activeHigh;  // initial button state in active-high logic
-  _lastState     = _btnState;
-  _clickCount    = 0;
-  clicks         = 0;
-  depressed      = 0;
-  _lastBounceTime= 0;
-  debounceTime   = 20;            // Debounce timer in ms
-  multiclickTime = 250;           // Time limit for multi clicks
-  longClickTime  = 1000;          // time until "long" click register
-//  pinMode(_pin, INPUT);
-  // Turn on internal pullup resistor if applicable
-  if (_activeHigh == LOW && internalPullup == CLICKBTN_PULLUP) digitalWrite(_pin,HIGH);
-//  pinMode(_pin, INPUT);
-  
-//  ADCChannel = A0;
   limit = adcLimit;
   samples = adcSamples;
 }

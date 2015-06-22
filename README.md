@@ -1,7 +1,8 @@
 # ADCTouchClickButton
 Merge existing ADCTouch library with existing ClickButton library for Arduino
 
-Now it is possible to use a touch button with a single, double, long press and more.
-It can be used like the ClickButton.
+https://code.google.com/p/clickbutton/
+http://playground.arduino.cc/Code/ADCTouch
 
-Initialisation is a bit different.
+Now it is possible to use a touch button with a single, double, long press and more.
+
