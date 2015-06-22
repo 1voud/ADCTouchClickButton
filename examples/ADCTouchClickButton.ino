@@ -1,6 +1,6 @@
 #include <ADCTouchClickButton.h>
 
-ADCTouchClickButton button1(A0, 10, 250, LOW, CLICKBTN_PULLUP);
+ADCTouchClickButton button1(A0, 10, 250, LOW);
     
 void setup() {
   Serial.begin(9600);
