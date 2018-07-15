@@ -1,1 +1,8 @@
-ADCTouchClickButton 
+ADCTouchClickButton	KEYWORD1
+Update	KEYWORD2
+createReference	KEYWORD2
+clicks	KEYWORD2
+depressed	KEYWORD2
+debounceTime	KEYWORD2
+multiclickTime	KEYWORD2
+longClickTime	KEYWORD2
